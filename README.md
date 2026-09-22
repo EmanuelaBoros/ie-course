@@ -1,6 +1,6 @@
 # Information extraction: from mentions to entities
 
-Draft teaching plan: two connected three-hour sessions, in English, for students with basic Python and introductory machine learning. Duration and audience are assumptions to confirm. NEL means named entity linking. This is a preparation blueprint, not a finished slide deck or executable lab package.
+Teaching plan: two connected units, each with 1h30 CM (lecture) and 3h TP (practical), for a total of 9 contact hours. The assumed audience has basic Python and introductory machine learning; teaching language remains to be confirmed. NEL means named entity linking. This is a preparation blueprint, not a finished slide deck or executable lab package.
 
 ## 1. Fit with the supplied courses
 
@@ -38,20 +38,29 @@ IE is broader than NER and NEL: briefly locate relation extraction, event extrac
 
 Central question: **Which text spans mention entities, and what types do they have?**
 
-### Schedule
+### CM — 1h30
+
+| Minutes | Topic | Teaching activity |
+|---|---|---|
+| 0–15 | Introduction to IE: entities, relations, events; NER versus NEL | Turn a short article into a structured table |
+| 15–35 | Mentions, types and annotation conventions | Annotate examples together and resolve boundary disagreements |
+| 35–50 | Spans, character offsets and BIO encoding | Encode one sentence and discuss tokenization |
+| 50–70 | Gazetteers, token classification and contextual models | Follow the progression from rules to learned predictions |
+| 70–85 | Exact-span precision, recall and F1 | Calculate a boundary-error example together |
+| 85–90 | TP briefing and exit question | State the comparison and expected deliverables |
+
+### TP — 3h
 
 | Minutes | Activity | Concrete outcome |
 |---|---|---|
-| 0–15 | Raw text to structured records; define IE, NER and NEL | Students distinguish mentions from entities |
-| 15–35 | Pair annotation of six short sentences | A shared PERSON/ORG/LOC policy |
-| 35–55 | Spans, character offsets, tokenization and BIO encoding | One sentence encoded both ways |
-| 55–70 | Gazetteer/rules, token classification and contextual representations | Understand the baseline and its limits |
+| 0–20 | Open the notebook, inspect data and validate offsets | Understand the schema and fixed splits |
+| 20–40 | Annotate a small training sample in pairs | Apply the policy and discuss disagreements |
+| 40–70 | Implement and evaluate the gazetteer baseline | Development predictions and exact-span scores |
 | 70–80 | Break | |
-| 80–105 | Lab A: inspect data and run a gazetteer baseline | Predicted spans plus initial scores |
-| 105–135 | Lab B: compare a supplied learned recognizer | A fair comparison on the same examples |
-| 135–160 | Lab C: inspect development errors and make one change | Documented improvement or negative result |
-| 160–175 | Freeze choices and evaluate held-out examples | Exact-span precision, recall and F1 |
-| 175–180 | Exit question and bridge to linking | “Correct name, but which entity?” |
+| 80–110 | Run the supplied learned recognizer and normalize its output | Fair comparison on the same documents |
+| 110–140 | Analyze development errors and implement one improvement | A controlled experiment |
+| 140–160 | Freeze choices, run held-out evaluation and export predictions | Results table and input for the NEL TP |
+| 160–180 | Explain three errors and write a short conclusion | Completed notebook and error report |
 
 ### Teaching sequence / slide storyboard
 
@@ -99,7 +108,7 @@ Baseline: longest non-overlapping gazetteer match, with a declared tie-breaking 
 
 One permitted improvement: repair a specific boundary rule, add a training-derived alias or add a context feature. Select it using development examples only. Do not edit the held-out gold labels to match model predictions.
 
-Optional ML implementation track: train a token-level logistic regression with word shape, capitalization, affixes and neighboring words. Explain that independent predictions can produce invalid BIO sequences; provide a deterministic decoding policy. Optional advanced track: transformer fine-tuning, including subword-to-word label alignment. Keep both outside the required three-hour path.
+Optional ML implementation track: train a token-level logistic regression with word shape, capitalization, affixes and neighboring words. Explain that independent predictions can produce invalid BIO sequences; provide a deterministic decoding policy. Optional advanced track: transformer fine-tuning, including subword-to-word label alignment. Keep both outside the required practical path.
 
 ### Evaluation example
 
@@ -114,20 +123,29 @@ Exit question: Why can a recognizer have high token accuracy while failing to ex
 
 Central question: **Which knowledge-base entity does each mention refer to?**
 
-### Schedule
+### CM — 1h30
+
+| Minutes | Topic | Teaching activity |
+|---|---|---|
+| 0–15 | From recognized mentions to canonical identities | Compare ambiguous names in different contexts |
+| 15–30 | KB records, aliases, descriptions and NIL | Inspect a small KB and identify its coverage limits |
+| 30–50 | Candidate retrieval and prior-based ranking | Work through candidate generation by hand |
+| 50–65 | Context-based ranking and rejection decisions | Compare the prior with description similarity |
+| 65–85 | Component and end-to-end evaluation | Calculate retrieval recall and linking accuracy; trace NER errors |
+| 85–90 | TP briefing and exit question | Identify the experiment and required outputs |
+
+### TP — 3h
 
 | Minutes | Activity | Concrete outcome |
 |---|---|---|
-| 0–15 | Revisit ambiguous names from session 1 | Separate type prediction and identity resolution |
-| 15–35 | KB records, aliases, descriptions and NIL | Understand the target representation |
-| 35–55 | Candidate generation, prior baseline, contextual ranking | Understand the two-stage pipeline |
-| 55–70 | Worked linking examples and evaluation denominators | Separate missing candidates from bad ranking |
-| 70–80 | Break | |
-| 80–110 | Lab A: candidates and prior baseline on gold mentions | Candidate recall and link accuracy |
-| 110–140 | Lab B: add context similarity and a rejection rule | Development comparison |
-| 140–160 | Lab C: replace gold mentions with NER predictions | Observe propagated errors |
-| 160–175 | Held-out evaluation and three failure cases | Complete pipeline report |
-| 175–180 | Exit question | Explain where improvement is needed |
+| 0–20 | Inspect the KB and gold mentions | Understand aliases, ambiguous candidates and NIL cases |
+| 20–50 | Implement candidate generation and a prior baseline | Candidate recall and gold-mention accuracy |
+| 50–75 | Add context-to-description similarity | A second ranker with inspectable scores |
+| 75–85 | Break | |
+| 85–115 | Tune ranking weight and rejection rule on development data | Frozen configuration and diagnostic errors |
+| 115–145 | Connect the linker to session 1's NER predictions | End-to-end predictions and propagated errors |
+| 145–165 | Run held-out component and pipeline evaluation | A table separating retrieval, ranking, NIL and pipeline results |
+| 165–180 | Explain three failures and summarize the experiment | Completed notebook and error report |
 
 ### Teaching sequence / slide storyboard
 
@@ -215,9 +233,13 @@ Pairs submit two notebooks and a short report. Require a baseline/improvement ta
 
 Optional LLM comparison: provide the same retrieved candidates and descriptions, ask for one candidate ID or NIL, validate that returned IDs belong to that set, and use the same held-out examples. Record prompt/model/version and malformed outputs. The LLM does not define the gold labels. Keep this optional to avoid API access becoming a course prerequisite.
 
-## 7. Shorter-session adaptation
+## 7. Delivery and workload
 
-For two 90-minute sessions, use 25 minutes of concepts, 10 minutes of annotation/worked examples, 45 minutes of guided lab and 10 minutes of discussion in each session. Supply all infrastructure, scoring functions and model predictions. Students change one rule in NER and one context-ranking choice in NEL. Move model training and full reports to homework.
+Total: 3h CM + 6h TP = 9h. Each unit has its own 1h30 CM followed by a 3h TP. The CM establishes the concepts and worked examples; the TP is reserved for implementation, experimentation and interpretation.
+
+Have the environment and model files ready before the TP. Supply data loaders, model-loading code and scoring scaffolding so students spend their time on NER/NEL decisions. Keep model fine-tuning and the optional LLM comparison as extensions for faster groups. The core deliverables should fit within contact time, with no mandatory additional project.
+
+If the two TPs take place on different days, retain each group's exported NER predictions. Supply a reference prediction file as a fallback so incomplete session 1 work does not block session 2.
 
 ## 8. Source map and further reading
 
