@@ -1,0 +1,14 @@
+title: ie-course
+description: Information Extraction — Named Entity Recognition and Linking
+url: "https://emanuelaboros.github.io"
+baseurl: "/ie-course"
+theme: jekyll-theme-primer
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: false
+exclude:
+  - Gemfile
+  - Gemfile.lock
