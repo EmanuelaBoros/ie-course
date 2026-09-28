@@ -268,6 +268,12 @@ These badges recognize the quality of the investigation, independently of which 
 
 ---
 
+## Optional Final Step — Publish on Hugging Face 🤗
+
+[Request to join L3i++](https://huggingface.co/l3ipp), then consider releasing your evaluated model or reproducible pipeline. A rule-based system is welcome too: share its code, resources and a clear model/pipeline card. Publishing is optional and depends on reuse rights and access; use your own namespace unless the instructor authorizes an organization release.
+
+Follow the [step-by-step publishing tutorial](./publish-hugging-face.md), then include the Hub link and release revision in your submission.
+
 ## Reminders
 
 You should be able to explain every component you submit. AI may help with debugging or discussion, but it must not replace your experimental decisions or your understanding of the code.

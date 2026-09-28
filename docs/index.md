@@ -67,9 +67,19 @@ Deliver code, saved predictions, metrics and a short error analysis. The [studen
 
 ## Resources
 
+- [Historical NEL — Emanuela Boros on Hugging Face](https://huggingface.co/emanuelaboros/historical-nel)
+
 - [Hugging Face: token classification](https://huggingface.co/learn/llm-course/en/chapter7/2)
 - [spaCy: rule-based matching](https://spacy.io/usage/rule-based-matching/)
 - [BLINK: dense entity retrieval](https://aclanthology.org/2020.emnlp-main.519/)
+
+---
+
+## Join L3i on Hugging Face 🤗
+
+Students are encouraged to [request to join L3i++ on Hugging Face](https://huggingface.co/l3ipp). At the end of the group project, publish your model or reproducible NER + NEL pipeline when possible and share the link with the class. Publication is optional; coordinate with the instructor before publishing under the lab organization.
+
+[📘 Tutorial: publish your project on Hugging Face](./3-Group-Projects/publish-hugging-face.md)
 
 ---
 
