@@ -53,6 +53,18 @@ Deliver code, saved predictions, metrics and a short error analysis. Notebook fi
 
 ---
 
+## Group Project
+
+[🏆 Group Project: Can Your NER + NEL Pipeline Beat Generative AI?](./3-Group-Projects/group_project_ie_ai.md)
+
+- One-week project after the practical; groups of 2–4 students.
+- Build a NER + NEL baseline, improve one component and compare with a generative-AI solution.
+- Five-minute presentation, reproducible results and three concrete errors.
+- Six bonus badges recognize thoughtful experiments, clear analysis and useful visualizations.
+- Deadline to be announced; no paid AI access required.
+
+---
+
 ## Resources
 
 - [Hugging Face: token classification](https://huggingface.co/learn/llm-course/en/chapter7/2)
