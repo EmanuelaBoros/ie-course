@@ -18,8 +18,8 @@ Clone [the repository](https://github.com/EmanuelaBoros/ie-course) with `git clo
 
 | # | Topic | Slides / Materials | Practical | Status |
 |--|------|--------------------|----------|----------|
-| 1 | Information Extraction & Named Entity Recognition | [📄 Slides](./1-Information-Extraction-and-NER/01-information-extraction.pdf) · [PowerPoint](./1-Information-Extraction-and-NER/01-information-extraction.pptx) | [Module guide](./1-Information-Extraction-and-NER/01.md) | ✅ Slides available; notebook forthcoming |
-| 2 | Named Entity Linking & Entity Embeddings | [📄 Shared lecture, slides 61–82](./1-Information-Extraction-and-NER/01-information-extraction.pdf#page=61) | [Module guide](./2-Named-Entity-Linking/02.md) | ✅ Slides available; notebook forthcoming |
+| 1 | Information Extraction & Named Entity Recognition | [📄 Slides](./1-Information-Extraction-and-NER/01-information-extraction.pdf) · [PowerPoint](./1-Information-Extraction-and-NER/01-information-extraction.pptx) | [All-in-one notebook](./4-Practical/04.md) | ✅ Available |
+| 2 | Named Entity Linking & Entity Embeddings | [📄 Shared lecture, slides 61–82](./1-Information-Extraction-and-NER/01-information-extraction.pdf#page=61) | [Same notebook: NEL](./4-Practical/04.md) | ✅ Available |
 
 The two modules form one 90-minute lecture and one three-hour practical. The 96-slide lecture also includes a comparison with generative AI and a practical briefing.
 
@@ -49,7 +49,7 @@ Build a dictionary-based recognizer and a contextual entity linker. Compare thei
 | 120–155 min | Run a generative baseline and freeze both methods |
 | 155–180 min | Evaluate held-out outputs and explain differences |
 
-Deliver code, saved predictions, metrics and a short error analysis. Notebook files, datasets and detailed submission instructions are forthcoming. No grading weights or deadlines have been announced.
+Deliver code, saved predictions, metrics and a short error analysis. The [student notebook](./4-Practical/04.md) includes the classroom dataset, guided exercises and a group-project starter. Project submission requirements are in the [group-project handout](./3-Group-Projects/group_project_ie_ai.md). No grading weights or deadlines have been announced.
 
 ---
 

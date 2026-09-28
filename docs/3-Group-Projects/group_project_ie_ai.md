@@ -23,6 +23,8 @@ Your system may beat the AI on some cases and lose on others. Both outcomes are 
 
 ---
 
+Start with the [all-in-one practical notebook](../4-Practical/04.md). Its final section contains your project charter and pilot-data templates.
+
 ## Main Requirements
 
 Keep the project small: one text collection, one fixed knowledge base (KB), one annotation policy and one improvement. Reuse the practical code where helpful; explain and implement your own matching and linking decisions.
