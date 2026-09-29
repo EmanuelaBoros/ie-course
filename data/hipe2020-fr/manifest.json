@@ -1,0 +1,64 @@
+{
+  "source_repository": "https://github.com/hipe-eval/HIPE-2022-data",
+  "source_commit": "147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea",
+  "source_path": "data/v2.1/hipe2020/fr",
+  "columns": [
+    "TOKEN",
+    "NE-COARSE-LIT",
+    "NEL-LIT",
+    "MISC"
+  ],
+  "license": "CC-BY-NC-SA-4.0",
+  "files": [
+    {
+      "file": "HIPE-2022-v2.1-hipe2020-train-fr.tsv",
+      "split": "train",
+      "source_url": "https://raw.githubusercontent.com/hipe-eval/HIPE-2022-data/147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea/data/v2.1/hipe2020/fr/HIPE-2022-v2.1-hipe2020-train-fr.tsv",
+      "source_sha256": "2f627bc1d7362c38e38d793c978812fa85dcc1c6ccff63a249ee897eb809787a",
+      "sha256": "4d2c7c2b79cd3b8fa7e42c3429938248c794d2aa67a1615922efbff8084f177d",
+      "documents": 158,
+      "tokens": 166220,
+      "end_of_sentence_markers": 5743
+    },
+    {
+      "file": "HIPE-2022-v2.1-hipe2020-dev-fr.tsv",
+      "split": "dev",
+      "source_url": "https://raw.githubusercontent.com/hipe-eval/HIPE-2022-data/147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea/data/v2.1/hipe2020/fr/HIPE-2022-v2.1-hipe2020-dev-fr.tsv",
+      "source_sha256": "a98efbc45cb4e57cfb5431f833a6fbeab7feb6cb353a78032d09b86fbf191510",
+      "sha256": "8dc21502360a060743f370147cc35245e33fe50ad33e5579293024c08d9d3221",
+      "documents": 43,
+      "tokens": 37953,
+      "end_of_sentence_markers": 1244
+    },
+    {
+      "file": "HIPE-2022-v2.1-hipe2020-test-fr.tsv",
+      "split": "test",
+      "source_url": "https://raw.githubusercontent.com/hipe-eval/HIPE-2022-data/147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea/data/v2.1/hipe2020/fr/HIPE-2022-v2.1-hipe2020-test-fr.tsv",
+      "source_sha256": "c3e10f1c9a9b12bae71a40d8148516da3979315a405911474ecfee304bb688a6",
+      "sha256": "2bab98207c83727d2dbe3b3dfb67612ac7003ba72d5f96a80a28eadb2f8adc31",
+      "documents": 43,
+      "tokens": 40854,
+      "end_of_sentence_markers": 1462
+    },
+    {
+      "file": "HIPE-2022-v2.1-hipe2020-test_ELmasked-fr.tsv",
+      "split": "test_ELmasked",
+      "source_url": "https://raw.githubusercontent.com/hipe-eval/HIPE-2022-data/147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea/data/v2.1/hipe2020/fr/HIPE-2022-v2.1-hipe2020-test_ELmasked-fr.tsv",
+      "source_sha256": "d36b96c65220a46421f1291c4cf5a7bbbb4c965dc24db3084387242182b566fa",
+      "sha256": "cb1dd9af1dba12006c93e3e04d4a04f2e2fe014252f84d8b31ea51d62f042cf2",
+      "documents": 43,
+      "tokens": 40854,
+      "end_of_sentence_markers": 1462
+    },
+    {
+      "file": "HIPE-2022-v2.1-hipe2020-test_allmasked-fr.tsv",
+      "split": "test_allmasked",
+      "source_url": "https://raw.githubusercontent.com/hipe-eval/HIPE-2022-data/147f5bc3c7fb7e5c6b024a9ffd6503cd019fb9ea/data/v2.1/hipe2020/fr/HIPE-2022-v2.1-hipe2020-test_allmasked-fr.tsv",
+      "source_sha256": "99099489a81ba5d6429ad4c6779cb6c25c63ccd081f40841b57b9f1fdf23adc7",
+      "sha256": "36fa4895d64e18cc27fd3f6f72fba1d32b1187e922c2a03e92463eb52a14c654",
+      "documents": 43,
+      "tokens": 40854,
+      "end_of_sentence_markers": 1462
+    }
+  ]
+}
