@@ -1,93 +1,73 @@
 <p align="center">
-  <img src="./ie_banner.png" width="100%" alt="Turning news documents into structured information">
+  <img src="./ie_banner.png" width="100%" alt="Des documents textuels aux informations structurées">
 </p>
 
-## Welcome to the Information Extraction course 🚀
+## Extraction d’information : reconnaissance et liaison d’entités
 
-**Course:** Information Extraction — Named Entity Recognition and Linking  
-**Instructor:** Emanuela Boros  
-**Format:** 1h30 lecture + 3h practical
+**Enseignante :** Emanuela Boros  
+**Format :** 1 h 30 de cours magistral et 3 h de travaux pratiques
 
-How can we turn text into structured information? This course introduces the main information extraction tasks and methods, with hands-on work on named entity recognition (NER) and named entity linking (NEL).
+Comment transformer un texte en informations structurées ? Ce cours présente les principales tâches et méthodes d’extraction d’information, puis les applique à la reconnaissance d’entités nommées (NER) et à leur liaison à une base de connaissances (NEL).
 
-Clone [the repository](https://github.com/EmanuelaBoros/ie-course) with `git clone https://github.com/EmanuelaBoros/ie-course.git`. Materials will be added before each session.
+Le travail étudiant se limite au **TP de trois heures**, réalisé en binôme. Aucun projet de groupe ni présentation supplémentaire n’est demandé.
 
----
+## Supports du cours
 
-## Course Modules
+| Partie | Sujet | Supports |
+|---|---|---|
+| 1 | Extraction d’information et reconnaissance d’entités | [Présentation de la partie](./1-Information-Extraction-and-NER/01.md) · [Diapositives PDF](./1-Information-Extraction-and-NER/01-information-extraction.pdf) · [PowerPoint](./1-Information-Extraction-and-NER/01-information-extraction.pptx) |
+| 2 | Liaison d’entités et représentations vectorielles | [Présentation de la partie](./2-Named-Entity-Linking/02.md) · [Diapositives 61 à 82](./1-Information-Extraction-and-NER/01-information-extraction.pdf#page=61) |
+| TP | Reconnaissance, liaison et comparaison avec une IA générative | [Consignes et notebook en français](./4-Practical/04.md) |
 
-| # | Topic | Slides / Materials | Practical | Status |
-|--|------|--------------------|----------|----------|
-| 1 | Information Extraction & Named Entity Recognition | [📄 Slides](./1-Information-Extraction-and-NER/01-information-extraction.pdf) · [PowerPoint](./1-Information-Extraction-and-NER/01-information-extraction.pptx) | [All-in-one notebook](./4-Practical/04.md) | ✅ Available |
-| 2 | Named Entity Linking & Entity Embeddings | [📄 Shared lecture, slides 61–82](./1-Information-Extraction-and-NER/01-information-extraction.pdf#page=61) | [Same notebook: NEL](./4-Practical/04.md) | ✅ Available |
+Les deux parties composent un seul cours de 90 minutes, suivi d’un seul TP de trois heures.
 
-The two modules form one 90-minute lecture and one three-hour practical. The 96-slide lecture also includes a comparison with generative AI and a practical briefing.
+## Notions abordées
 
----
+- Utilité de l’extraction d’information et distinction avec la recherche d’information.
+- Entités, coréférence, relations, événements et informations temporelles.
+- Règles, dictionnaires, modèles statistiques, réseaux neuronaux et méthodes génératives.
+- Conventions d’annotation, frontières des mentions, étiquettes BIO et évaluation exacte.
+- Recherche de candidats, désambiguïsation et cas NIL.
+- Représentations vectorielles d’entités, bi-encodeurs et reclassement.
+- Comparaison contrôlée entre un algorithme étudiant et une IA générative.
 
-## Course Topics Overview
+## Déroulement du TP
 
-- Why information extraction matters; extraction versus retrieval
-- Entities, coreference, relations, events and temporal information
-- Rules, dictionaries, statistical models, neural models and generative extraction
-- Annotation policies, mention boundaries, BIO labels and exact-span evaluation
-- Candidate generation, disambiguation and NIL entities
-- Entity embeddings, bi-encoders, reranking and knowledge graphs
-- A controlled comparison between a student algorithm and a generative model
+Construisez un système de reconnaissance par dictionnaire et un système de liaison contextuelle. Comparez leurs sorties à celles d’un modèle génératif sur les mêmes exemples, avec le même schéma et les mêmes mesures.
 
----
+| Durée | Activité |
+|---|---|
+| 0–30 min | Examiner les données, les annotations et les mesures |
+| 30–75 min | Implémenter la NER et analyser les erreurs de frontières |
+| 75–120 min | Rechercher les candidats et utiliser le contexte pour la NEL |
+| 120–155 min | Exécuter la comparaison générative et figer les choix |
+| 155–180 min | Évaluer les sorties et expliquer les différences |
 
-## Practical and Evaluation
+**À rendre :** le notebook complété, les prédictions et réponses IA sauvegardées, les scores et une courte analyse de trois erreurs. Aucun service d’IA payant n’est nécessaire. Une difficulté d’accès doit être signalée, sans inventer de résultats.
 
-Build a dictionary-based recognizer and a contextual entity linker. Compare their predictions with a generative model on the same held-out examples and output schema.
+## Données
 
-| Time | Activity |
-|------|----------|
-| 0–30 min | Inspect the schema, annotated examples and evaluation code |
-| 30–75 min | Build dictionary NER and analyze boundary errors |
-| 75–120 min | Implement candidate lookup and contextual NEL |
-| 120–155 min | Run a generative baseline and freeze both methods |
-| 155–180 min | Evaluate held-out outputs and explain differences |
+Les [données françaises HIPE-2022 v2.1](https://github.com/EmanuelaBoros/ie-course/tree/main/data/hipe2020-fr) sont disponibles avec les colonnes `TOKEN`, `NE-COARSE-LIT`, `NEL-LIT` et `MISC`. Le dossier contient les partitions, les variantes de test masquées, un exemple de chargement et la licence.
 
-Deliver code, saved predictions, metrics and a short error analysis. The [student notebook](./4-Practical/04.md) includes the classroom dataset, guided exercises and a group-project starter. Project submission requirements are in the [group-project handout](./3-Group-Projects/group_project_ie_ai.md). No grading weights or deadlines have been announced.
+Le notebook actuellement publié utilise encore des exemples synthétiques pour introduire les algorithmes. Son adaptation complète aux annotations HIPE et aux candidats Wikidata reste à effectuer. Les consignes du [TP](./4-Practical/04.md) précisent cette distinction.
 
----
+## Ressources
 
-## Group Project
+- [Modèle de liaison d’entités historiques d’Emanuela Boros](https://huggingface.co/emanuelaboros/historical-nel).
+- [Hugging Face : classification de tokens](https://huggingface.co/learn/llm-course/en/chapter7/2).
+- [spaCy : reconnaissance par règles](https://spacy.io/usage/rule-based-matching/).
+- [BLINK : recherche dense d’entités](https://aclanthology.org/2020.emnlp-main.519/).
+- [Communauté L3i++ sur Hugging Face](https://huggingface.co/l3ipp) : vous pouvez demander à la rejoindre. Aucune publication de modèle n’est demandée dans ce TP.
 
-[🏆 Group Project: Can Your NER + NEL Pipeline Beat Generative AI?](./3-Group-Projects/group_project_ie_ai.md)
+## Accès au dépôt
 
-- One-week project after the practical; groups of 2–4 students.
-- Build a NER + NEL baseline, improve one component and compare with a generative-AI solution.
-- Five-minute presentation, reproducible results and three concrete errors.
-- Six bonus badges recognize thoughtful experiments, clear analysis and useful visualizations.
-- Deadline to be announced; no paid AI access required.
+```bash
+git clone https://github.com/EmanuelaBoros/ie-course.git
+```
 
----
+## Contact
 
-## Resources
+Emanuela Boros  
+[emanuela.boros@univ-lr.fr](mailto:emanuela.boros@univ-lr.fr)
 
-- [Historical NEL — Emanuela Boros on Hugging Face](https://huggingface.co/emanuelaboros/historical-nel)
-
-- [Hugging Face: token classification](https://huggingface.co/learn/llm-course/en/chapter7/2)
-- [spaCy: rule-based matching](https://spacy.io/usage/rule-based-matching/)
-- [BLINK: dense entity retrieval](https://aclanthology.org/2020.emnlp-main.519/)
-
----
-
-## Join L3i on Hugging Face 🤗
-
-Students are encouraged to [request to join L3i++ on Hugging Face](https://huggingface.co/l3ipp). At the end of the group project, publish your model or reproducible NER + NEL pipeline when possible and share the link with the class. Publication is optional; coordinate with the instructor before publishing under the lab organization.
-
-[📘 Tutorial: publish your project on Hugging Face](./3-Group-Projects/publish-hugging-face.md)
-
----
-
-## 💬 Contact
-
-Assist. Prof.: *Emanuela Boros*  
-Email: *emanuela.boros@univ-lr.fr*
-
----
-
-Website structure adapted from the [ML course](https://github.com/USTH-classroom/ml-course). [Template license](./template-license.txt).
+Structure du site adaptée du [cours de machine learning](https://github.com/USTH-classroom/ml-course). [Licence du modèle de site](./template-license.txt).

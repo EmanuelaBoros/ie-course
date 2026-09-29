@@ -1,5 +1,5 @@
-# Coming Soon 🚧
+# Supports du cours
 
-The practical notebooks and datasets are being prepared. They will include NER, candidate generation, contextual linking and a controlled generative-AI comparison.
+Le [notebook français et les consignes du TP](./4-Practical/04.md) sont disponibles. Les fichiers HIPE-2022 sont accessibles depuis cette page.
 
-Lecture slides are already available from the [course homepage](./index.md).
+Retrouvez les diapositives sur la [page d’accueil](./index.md).

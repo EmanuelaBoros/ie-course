@@ -1,5 +1,5 @@
 title: ie-course
-description: Information Extraction — Named Entity Recognition and Linking
+description: Extraction d’information — Reconnaissance et liaison d’entités nommées
 url: "https://emanuelaboros.github.io"
 baseurl: "/ie-course"
 theme: jekyll-theme-primer
@@ -12,3 +12,5 @@ relative_links:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - 3-Group-Projects
+  - 4-Practical/01-ner-nel-practical.ipynb
