@@ -15,9 +15,9 @@ Le travail étudiant se limite au **TP de trois heures**, réalisé en binôme. 
 
 | Partie | Sujet | Supports |
 |---|---|---|
-| 1 | Extraction d’information et reconnaissance d’entités | [Présentation de la partie](./1-Information-Extraction-and-NER/01.md) · [Diapositives PDF](./1-Information-Extraction-and-NER/01-information-extraction.pdf) · [PowerPoint](./1-Information-Extraction-and-NER/01-information-extraction.pptx) |
+| 1 | Extraction d’information et reconnaissance d’entités | [Présentation de la partie](./1-Information-Extraction-and-NER/01.md) · [Diapositives PDF](./1-Information-Extraction-and-NER/01-information-extraction.pdf) |
 | 2 | Liaison d’entités et représentations vectorielles | [Présentation de la partie](./2-Named-Entity-Linking/02.md) · [Diapositives 61 à 82](./1-Information-Extraction-and-NER/01-information-extraction.pdf#page=61) |
-| TP | Reconnaissance, liaison et comparaison avec une IA générative | [Consignes et notebook en français](./4-Practical/04.md) |
+| TP | Reconnaissance, liaison et comparaison avec une IA générative | [Consignes et notebook](./4-Practical/04.md) |
 
 Les deux parties composent un seul cours de 90 minutes, suivi d’un seul TP de trois heures.
 
