@@ -48,7 +48,7 @@ Construisez un système de reconnaissance par dictionnaire et un système de lia
 
 ## Données
 
-Les [données françaises HIPE-2022 v2.1](https://github.com/EmanuelaBoros/ie-course/tree/main/data/hipe2020-fr) sont disponibles avec les colonnes `TOKEN`, `NE-COARSE-LIT`, `NEL-LIT` et `MISC`. Le dossier contient les partitions, les variantes de test masquées, un exemple de chargement et la licence.
+Les [données françaises HIPE-2022 v2.1](https://github.com/EmanuelaBoros/ie-course/tree/main/docs/4-Practical/data/hipe2020-fr) sont disponibles avec les colonnes `TOKEN`, `NE-COARSE-LIT`, `NEL-LIT` et `MISC`. Le dossier contient les partitions, les variantes de test masquées, un exemple de chargement et la licence.
 
 Le notebook actuellement publié utilise encore des exemples synthétiques pour introduire les algorithmes. Son adaptation complète aux annotations HIPE et aux candidats Wikidata reste à effectuer. Les consignes du [TP](./4-Practical/04.md) précisent cette distinction.
 
