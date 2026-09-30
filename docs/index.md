@@ -5,7 +5,7 @@
 ## Extraction d’information : reconnaissance et liaison d’entités
 
 **Enseignante :** Emanuela Boros  
-**Format :** 1 h 30 de cours magistral et 3 h de travaux pratiques
+**Format :** 1 h 30 de cours magistral et 3 h de travaux pratiques  
 **Lien :** https://emanuelaboros.github.io/ie-course/
 
 Comment transformer un texte en informations structurées ? Ce cours présente les principales tâches et méthodes d’extraction d’information, puis les applique à la reconnaissance d’entités nommées (NER) et à leur liaison à une base de connaissances (NEL).
